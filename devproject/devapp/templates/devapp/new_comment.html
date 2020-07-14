@@ -1,0 +1,15 @@
+{% extends "devapp/base.html" %}
+{% block content %}
+
+<div class="jumbotron" style="background-color:white;">
+    <h2>New Comment</h2>
+<p>note: phone no. is not required</p>
+    <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="post comment">
+</form>
+
+</div>
+
+{% endblock %}

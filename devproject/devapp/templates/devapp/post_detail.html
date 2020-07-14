@@ -1,0 +1,35 @@
+{% extends 'devapp/base.html' %}
+{% block content %}
+<br><br><br>
+<style>
+    hr{
+        background-color:black;
+    }
+
+</style>
+<div class='jumbotron' style="background-color:white;">
+    <h2>{{ post.title }}</h2>
+    <small>made by {{ post.author }}</small>
+    <p>{{ post.body }}</p>
+    <br>
+    <small>made on {{ post.made_on }}</small><br>
+    <button type="button" class="btn btn-success"><a href="{% url 'comment_new' pk=post.pk %}" style="color:white;" target='_blank'>Add a comment!</a></button><br>
+
+    <h3>Comments</h3>
+
+    {% for comment in post.comments.all %}
+          <hr>
+          {{ comment.created_date }}
+          <span>{{ comment.text|safe|linebreaks }}</span>
+          <span>Posted by: <strong>{{ comment.author }}</strong></span>
+
+
+  {% empty %}
+      <p>No comments posted.</p>
+  {% endfor %}
+
+</div>
+
+
+
+{% endblock %}
