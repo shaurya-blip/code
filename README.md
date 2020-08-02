@@ -4,3 +4,4 @@
 <p>See the actual website <a href="https://shauryaservo.pythonanywhere.com">here!</a></p>
 
 <marquee>This all is under the copyright of Shaurya Pratap Singh 2020</marquee>
+<marquee direction = "up">The direction of text will be from bottom to top.</marquee>
