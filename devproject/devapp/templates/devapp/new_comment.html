@@ -1,12 +1,11 @@
 {% extends "devapp/base.html" %}
 {% block content %}
-
+{% load bootstrap4 %}
 <div class="jumbotron" style="background-color:white;">
     <h2>New Comment</h2>
-<p>note: phone no. is not required</p>
     <form method="POST">
     {% csrf_token %}
-    {{ form }}
+    {% bootstrap_form form %}
     <input type="submit" value="post comment">
 </form>
 
