@@ -1,6 +1,4 @@
-# from github repository shaurya-blip/code
-# link -> https://www.github.com/shaurya-blip/code
-# Copyrights registered shaurya-blip2020
+
 
 from django.views.generic import DetailView,ListView,CreateView
 from django.shortcuts import render, get_object_or_404, redirect
